@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DylBox</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3be0e7a99d.js" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/main.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #game-screen {
+                display: none; /* Hide game screen by default */
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .form-error {
+                color: red;
+                font-size: 0.8rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Join Form -->
+        <div id="room-code-form">
+            <label for="roomcode">Room Code</label>
+            <input type="text" id="form-roomcode" maxlength="5" />
+            <p id="form-roomcode-invalid" class="form-error hidden">Room does not exist</p>
+            <label for="name">Nickname</label>
+            <input type="text" id="form-name" maxlength="10" />
+            <p id="form-name-invalid" class="form-error hidden">Name already taken</p>
+            <button id="join-game-button">Join Game</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen">
+            <h1>Game Screen</h1>
+            <p id="game-status"></p>
+        </div>
+    </body>
+</html>
