@@ -10,20 +10,6 @@
         <script src="/socket.io/socket.io.js"></script>
         <script src="/js/main.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            #game-screen {
-                display: none; /* Hide game screen by default */
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            .form-error {
-                color: red;
-                font-size: 0.8rem;
-            }
-        </style>
     </head>
 
     <body>
@@ -42,6 +28,15 @@
         <div id="game-screen">
             <h1>Game Screen</h1>
             <p id="game-status"></p>
+        </div>
+        <div id="player-ready-screen" class="hidden">
+            <h1>Waiting for Other Players...</h1>
+            <p>You're ready! Waiting for everyone else to get ready.</p>
+        </div>
+        <div id="ready-up-screen">
+            <h1>Ready Up</h1>
+            <p id="status-text">Press ready to start the game.</p>
+            <button id="ready-up-button">Ready Up</button>
         </div>
     </body>
 </html>
